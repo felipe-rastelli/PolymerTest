@@ -1,0 +1,78 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<dom-module id="blog-post-simple">
+  <template>
+    <style>
+      :host{
+        display: block;
+        width: 95%;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        margin: 0px auto;
+      }
+      article{
+        /*border-radius: 8px;*/
+        padding: 15px 20px;
+      }
+      header{
+        padding: 10px;
+        /*background-color: #ffe6e6;*/
+        border-bottom: 1px solid #ccc;
+        position: relative;
+      }      
+      header span{        
+        font-size: 0.9em;
+      }
+      header time{
+        font-size: 0.9em;
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+      }
+      header h2{
+        margin-top: 5px;
+        margin-bottom: 5px;
+        font-size: 1.5em;
+      }
+      div{
+        padding: 10px;
+        text-align: justify;
+        position: relative;
+      }
+      div p{
+        padding: 5px 5px 25px 5px;
+      }
+      a{
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        text-decoration: none;
+        color: #e42410;
+      }
+    </style>
+
+    <article>
+      <header>
+        <h2>[[title]]</h2>
+        <span>[[subtitle]]</span>
+        <time>[[date]]</time>
+      </header>
+      <div>
+        <p>[[description]]</p>
+        <a href$="[[link]]">Continuar lendo...</a>
+      </div>      
+    </article>    
+  </template>
+
+  <script>
+    Polymer({
+      is: 'blog-post-simple',
+      properties: {
+        title: String,
+        subtitle: String,
+        date: String,
+        description: String,
+        link: String
+      }
+    });
+  </script>
+</dom-module>

@@ -3,13 +3,17 @@
 <dom-module id="blog-header">
   <template>
     <style>
+      :host{
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      }
       div{
-        margin: 10px;
+        margin: 10px 10px 30px 10px;
         text-align: center;
       }
     </style>
     <div>
       <img src$="[[link]]" alt$="[[alt]]">
+      <h1>[[title]]</h1>
     </div>
   </template>
 
@@ -17,6 +21,7 @@
     Polymer({
       is: 'blog-header',
       properties: {
+        title: String,
         link: String,
         alt: String
       }      
