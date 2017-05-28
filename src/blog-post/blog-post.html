@@ -1,0 +1,76 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<dom-module id="blog-post">
+  <template>
+    <style>
+      :host{
+        display: block;
+        width: 95%;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        margin: 15px auto;
+      }
+      article{
+        border: 1px solid #ccc;
+        border-radius: 8px;
+      }
+      /*article:hover{        
+        box-shadow: 2px 2px 4px gray;
+      }*/
+      header{
+        border-top-left-radius: inherit;
+        border-top-right-radius: inherit;
+        padding: 10px;
+        background-color: #ffe6e6;
+      }
+      div{
+        border-bottom-left-radius: inherit;
+        border-bottom-right-radius: inherit;
+        background-color: #e6ffff;
+        padding: 10px;
+        text-align: justify;
+        position: relative;
+      }
+      div p{
+        margin-bottom: 30px;
+      }
+      h2{
+        margin-top: 5px;
+        margin-bottom: 5px;
+        font-size: 2em;
+      }
+      a{
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        text-decoration: none;
+        color: #e42410;
+      }
+      time{
+        font-size: 0.9em;
+      }
+    </style>
+
+    <article>
+      <header>
+        <h2>[[title]]</h2>
+        <time>[[date]]</time>
+      </header>
+      <div>
+        <p>[[description]]</p>
+        <a href$="[[link]]">Continuar lendo...</a>
+      </div>      
+    </article>    
+  </template>
+
+  <script>
+    Polymer({
+      is: 'blog-post',
+      properties: {
+        title: String,
+        date: String,
+        description: String,
+        link: String
+      }
+    });
+  </script>
+</dom-module>

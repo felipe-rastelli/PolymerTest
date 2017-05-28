@@ -1,0 +1,25 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<dom-module id="blog-header">
+  <template>
+    <style>
+      div{
+        margin: 10px;
+        text-align: center;
+      }
+    </style>
+    <div>
+      <img src$="[[link]]" alt$="[[alt]]">
+    </div>
+  </template>
+
+  <script>
+    Polymer({
+      is: 'blog-header',
+      properties: {
+        link: String,
+        alt: String
+      }      
+    });
+  </script>
+</dom-module>

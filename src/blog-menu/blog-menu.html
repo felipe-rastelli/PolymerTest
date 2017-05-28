@@ -1,0 +1,39 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<dom-module id="blog-menu">
+  <template>
+    <style>
+      :host{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        margin: 20px;
+      }
+      nav{        
+        background-color: white;
+        text-align: center;
+      }
+      nav a{
+        text-decoration: none;
+        color: black;
+        padding: 10px;
+        font-size: 1.3em;
+      }
+      nav a:hover{        
+        border-bottom: 2px solid #82b3c9;
+      }
+    </style>
+    <nav>
+      <template is="dom-repeat" items="{{items}}">
+        <a href="{{item.link}}">{{item.name}}</a>
+      </template>
+    </nav>
+  </template>
+
+  <script>
+    Polymer({
+      is: 'blog-menu',
+      properties: {
+        items: Array
+      }      
+    });
+  </script>
+</dom-module>

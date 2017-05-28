@@ -1,0 +1,29 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<dom-module id="blog-app">
+  <template>
+    <style>
+      :host{
+        display: block;
+        width: 80%;
+        margin: 15px auto;
+        padding: 5px;
+        background-color: white;
+        box-shadow: 2px 2px 4px gray;
+      }
+    </style>
+    <content></content>
+  </template>
+
+  <script>
+    Polymer({
+      is: 'blog-app',
+      properties: {
+        prop1: {
+          type: String,
+          value: 'blog-app',
+        }
+      }
+    });
+  </script>
+</dom-module>

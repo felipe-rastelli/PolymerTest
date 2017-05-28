@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <title>Blog</title>
+    <meta name="description" content="Blog description">
+
+    <!-- See https://goo.gl/OOhYW5 -->
+    <link rel="manifest" href="/manifest.json">
+
+    <script src="/bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+
+    <link rel="import" href="/src/blog-app/blog-app.html">
+    <link rel="import" href="/src/blog-post/blog-post.html">
+    <link rel="import" href="/src/blog-menu/blog-menu.html">
+    <link rel="import" href="/src/blog-header/blog-header.html">
+    <style>
+      body{
+        background-color: #ffcccc;
+      }      
+    </style>
+  </head>
+  <body>
+    <blog-app>
+      <blog-header link="https://web-components-resources.appspot.com/assets/images/why-web-components.jpg"></blog-header>
+      <blog-menu></blog-menu>
+      <blog-post title="Custom Elements: defining new elements in HTML" 
+        description="Custom Elements allow web developers to define new types of HTML elements. 
+          The spec is one of several new API primitives landing under the Web Components 
+          umbrella, but it's quite possibly the most important. "
+        date="10/05/2017" link="#">
+      </blog-post>
+      <blog-post title="Shadow DOM" 
+        description="hadow DOM provides encapsulation for DOM and CSS in a Web Component. 
+          Shadow DOM makes it so these things remain separate from the DOM of the main document. 
+          You can also use Shadow DOM by itself, outside of a web component." 
+        date="10/05/2017" link="#">
+      </blog-post>
+      <blog-post title="HTML's New Template Tag" 
+        description="The concept of templating is not new to web development. 
+          In fact, server-side templating languages/engines like Django (Python), ERB/Haml (Ruby), and Smarty (PHP) 
+          have been around for a long time. In the last couple of years however, we've seen an explosion of MVC frameworks spring up." 
+        date="10/05/2017" link="#">
+      </blog-post>
+      <blog-post title="HTML Imports: #include for the web" 
+        description="Think about how you load different types of resources on the web. 
+          For JS, we have <script src>. For CSS, your go-to is probably <link rel='stylesheet'>. 
+          For images it's <img>. Video has <video>. Audio, <audio>.... Get to the point! The majority 
+          of the web's content has a simple and declarative way to load itself. Not so for HTML." 
+        date="10/05/2017" link="#">
+      </blog-post>
+    </blog-app>
+    
+    <script>
+      var blogMenu = document.querySelector('blog-menu');
+      blogMenu.items = [
+        {link: '#', name:'Inicial'},
+        {link: '#', name:'Catálogo de Elementos'},
+        {link: '#', name:'Web Components'},
+        {link: '#', name:'Vantagens'}
+      ];
+    </script>
+  </body>
+</html>
